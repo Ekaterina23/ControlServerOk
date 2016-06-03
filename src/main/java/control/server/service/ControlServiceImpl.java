@@ -8,18 +8,16 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ControlServiceImpl implements ControlService{
+public class ControlServiceImpl implements ControlService {
 
     @Autowired
     private ControlRepository repository;
 
-    public List<Control> getAll()
-    {
+    public List<Control> getAll() {
         return repository.findAll();
     }
 
-    public Control getById(long id)
-    {
+    public Control findById(Long id) {
         return repository.findOne(id);
     }
 
@@ -27,8 +25,9 @@ public class ControlServiceImpl implements ControlService{
         return repository.saveAndFlush(control);
     }
 
-    public void remove(long id) {
+    public void remove(Long id) {
         repository.delete(id);
     }
+
 
 }

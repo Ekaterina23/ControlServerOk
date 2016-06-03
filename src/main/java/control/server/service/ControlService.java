@@ -7,8 +7,8 @@ import java.util.List;
 public interface ControlService {
 
     List<Control> getAll();
-    Control getById(long id);
+    Control findById(Long id);
     Control save(Control control);
-    void remove(long id);
+    void remove(Long id);
 
 }

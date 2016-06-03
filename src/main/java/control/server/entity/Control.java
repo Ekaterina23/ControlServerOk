@@ -14,6 +14,9 @@ public class Control {
     @GenericGenerator(name = "increment", strategy = "increment")
     private long id;
 
+   /* @Column (name = "NFCTags", nullable = false, length = 20)
+    private long nfc;*/
+
     @Column(name = "Фамилия", nullable = false, length = 50)
     private String surname;
 
@@ -23,9 +26,13 @@ public class Control {
     @Column(name = "Должность", nullable = false, length = 50)
     private String position;
 
-    @Column(name = "Дата", nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date conlrolDate;
+    @Column(name = "ДатаПрихода", nullable = false)
+    //@Temporal(TemporalType.TIMESTAMP)
+    private String timeIn;
+
+    @Column(name = "ДатаУхода", nullable = false)
+   // @Temporal(TemporalType.TIMESTAMP)
+    private String timeOut;
 
     public Control() {
     }
@@ -38,6 +45,14 @@ public class Control {
         this.id = id;
     }
 
+  /*  public long getNfc() {
+        return nfc;
+    }
+
+    public void setNfc(long nfc) {
+        this.nfc = nfc;
+    }
+*/
     public String getSurname() {
         return surname;
     }
@@ -62,11 +77,19 @@ public class Control {
         this.position = position;
     }
 
-    public Date getConlrolDate() {
-        return conlrolDate;
+    public String getTimeIn() {
+        return timeIn;
     }
 
-    public void setConlrolDate(Date conlrolDate) {
-        this.conlrolDate = conlrolDate;
+    public void setTimeIn(String timeIn) {
+        this.timeIn = timeIn;
+    }
+
+    public String getTimeOut() {
+        return timeOut;
+    }
+
+    public void setTimeOut(String timeOut) {
+        this.timeOut = timeOut;
     }
 }

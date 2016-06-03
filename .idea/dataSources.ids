@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - controldb@localhost" uuid="4ec93bf1-00d8-482f-9b02-0f34058f342a">
+    <database-info product="PostgreSQL" version="9.4.7" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.2">
+      <database id="1" name="controldb"/>
+      <schema id="2" parent="1" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-state-number>780</introspection-state-number>
+        <introspection-timestamp>2016-05-15.18:37:07.193</introspection-timestamp>
+      </schema>
+      <table id="3" parent="2" name="control">
+        <object-id>16571</object-id>
+        <state-number>780</state-number>
+      </table>
+      <column id="4" parent="3" name="id">
+        <state-number>780</state-number>
+        <mandatory>1</mandatory>
+        <data-type>bigint</data-type>
+      </column>
+      <column id="5" parent="3" name="ДатаПрихода">
+        <state-number>780</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="6" parent="3" name="ДатаУхода">
+        <state-number>780</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="7" parent="3" name="Имя">
+        <state-number>780</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="8" parent="3" name="Должность">
+        <state-number>780</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="9" parent="3" name="Фамилия">
+        <state-number>780</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <index id="10" parent="3" name="control_pkey">
+        <object-id>16574</object-id>
+        <columns>id</columns>
+        <unique>1</unique>
+      </index>
+      <key id="11" parent="3" name="control_pkey">
+        <columns>id</columns>
+        <underlying-index>control_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

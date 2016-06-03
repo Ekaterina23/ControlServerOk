@@ -20,24 +20,25 @@ public class ControlController {
         return service.getAll();
     }
 
-    @RequestMapping(value = "/control/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/control/get/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public Control getControl(@PathVariable("id") long controlId)
+    public Control getControlId(@PathVariable("id") Long id)
     {
-        return service.getById(controlId);
+        return service.findById(id);
     }
 
-    @RequestMapping(value = "/control", method = RequestMethod.POST)
+    @RequestMapping(value = "/control/post", method = RequestMethod.POST)
     @ResponseBody
     public Control saveControl(@RequestBody Control control)
     {
         return service.save(control);
     }
 
-    @RequestMapping(value = "/control/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/control/delete/{id}", method = RequestMethod.DELETE)
     @ResponseBody
-    public void deleteControl(@PathVariable long id)
+    public void remove(@PathVariable Long id)
     {
         service.remove(id);
     }
+
 }
